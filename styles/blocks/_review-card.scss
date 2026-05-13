@@ -8,7 +8,7 @@
     padding: 40px;
     border-radius: 12px;
 
-    background: url('./images/reviews-card__bg.png') center/cover no-repeat;
+    background: url('../images/reviews-card__bg.png') center/cover no-repeat;
 
     @include laptop {
         row-gap: 24px;
