@@ -395,8 +395,8 @@ a {
     display: flex;
     justify-content: space-between;
     padding-block: 80px;
-    background: url("../../images/icons/hero-icon-bg.svg") center/contain
-        no-repeat;
+    background: url("/Photographer-Portfolio/images/icons/hero-icon-bg.svg")
+        center/contain no-repeat;
 }
 @media (max-width: 1440px) {
     .hero__top {
@@ -1165,7 +1165,8 @@ a {
     height: 52px;
     border: 1px solid #1c1c21;
     border-radius: 50%;
-    background: url("../../images/icons/arrow-down.svg") center no-repeat;
+    background: url("/Photographer-Portfolio/images/icons/arrow-down.svg")
+        center no-repeat;
 }
 @media (max-width: 1440px) {
     .faq__accordion-indicator {
