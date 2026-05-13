@@ -1,0 +1,55 @@
+@use '../media' as *;
+
+.types {
+    position: relative;
+    left: calc(var(--container-padding-x) * -1);
+    width: 100vw;
+
+    overflow-x: scroll;
+    padding: 20px;
+
+    background-color: #0E0E10;
+    border-block: 1px solid #1C1C21;
+
+    @include laptop {
+        padding: 16px;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    &-list {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        @include laptop {
+            column-gap: 6px;
+        }
+    }
+
+    &-icon svg {
+        color: #AEA1F7;
+
+        @include laptop {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &-text {
+        text-wrap: nowrap;
+        color: #D6D0FB;
+
+        @include laptop {
+            font-size: 14px;
+        }
+    }
+}

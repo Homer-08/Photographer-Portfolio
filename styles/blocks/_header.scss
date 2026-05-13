@@ -1,0 +1,74 @@
+@use '../media' as *;
+@use '../mixins' as *;
+
+.header {
+    padding-inline: 125px;
+    border-bottom: #1C1C21 solid 1px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+
+        padding-inline: 40px;
+
+        border-inline: #1C1C21 solid 1px;
+
+        @include laptop {
+            padding-inline: 18px;
+        }
+
+        @include tablet {
+            padding-top: 40px;
+            padding-inline: 16px 0;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        @include mobile {
+            width: 90px;
+            height: 18px;
+        }
+    }
+
+    &__menu {
+        padding-top: 32px;
+
+        &-list {
+            display: flex;
+
+            border: #1C1C21 solid 1px;
+            border-bottom: none;
+            border-radius: 12px 12px 0 0;
+
+            @include tablet {
+                @include visually-hidden;
+            }
+        }
+
+        &-item {
+            padding: 30px 50px;
+
+            &--active {
+                background-color: #131316;
+            }
+
+            &:not(:last-child) {
+                border-right: #1C1C21 solid 1px;
+            }
+        }
+    }
+
+    &__button {
+        @include tablet {
+            @include visually-hidden;
+        }
+    }
+
+    @include mobile {
+        padding-inline: 16px;
+    }
+}

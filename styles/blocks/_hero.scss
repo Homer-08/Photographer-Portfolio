@@ -1,0 +1,124 @@
+@use '../media' as *;
+
+.hero {
+    padding-bottom: 40px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        text-transform: uppercase;
+    }
+
+    &__top {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        padding-block: 80px;
+
+        background: url('../../images/icons/hero-icon-bg.svg') center/contain no-repeat;
+
+        @include laptop {
+            padding-block: 60px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        @include mobile {
+            padding-block: 40px;
+            background: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: calc(var(--container-padding-x) * -1);
+            width: 100vw;
+            height: 100%;
+            border-block: 1px solid #1C1C21;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        width: 100%;
+
+        @include laptop {
+            row-gap: 4px;
+        }
+    }
+
+    &__description {
+        font-size: 22px;
+        font-weight: 500;
+        color: #62646C;
+
+        @include laptop {
+            font-size: 18px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &__title {
+        font-size: 80px;
+        font-weight: 600;
+        color: #E4E4E6;
+
+        @include laptop {
+            font-size: 60px;
+        }
+
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+
+    &__right {
+        font-size: 58px;
+        font-weight: 600;
+        color: #fff;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+
+        & :last-child {
+            text-wrap: nowrap;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+
+        @include laptop {
+            font-size: 48px;
+        }
+
+        @include tablet {
+            font-size: 28px;
+        }
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+
+        @include laptop {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

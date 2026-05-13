@@ -1,0 +1,117 @@
+@use '../media' as *;
+
+.works {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 50px;
+
+        @include laptop {
+            column-gap: 30px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+
+            row-gap: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 19px;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &-image {
+            border-radius: 20px;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        &-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+
+                row-gap: 5px;
+            }
+
+            @include mobile {
+                flex-direction: row;
+                // justify-content: space-between;
+            }
+        }
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+
+            @include laptop {
+                row-gap: 2px;
+
+                text-align: center;
+            }
+
+            @include mobile {
+                text-align: start;
+            }
+        }
+
+        &-name {
+            font-size: 20px;
+            color: #CACACE;
+            font-weight: 500;
+
+            @include laptop {
+                font-size: 18px;
+            }
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        &-date {
+            color: #797C86;
+        }
+
+        &-button {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            background-color: transparent;
+            border: none;
+
+            border-bottom: 1px solid #2F2F37;
+            color: #F2F2F3;
+
+            text-transform: uppercase;
+
+            padding: 6px 0;
+
+            @include laptop {
+                column-gap: 6px;
+            }
+
+            svg {
+                margin: 3.75px;
+
+                @include laptop {
+                    margin: 3.13px;
+                }
+            }
+        }
+    }
+}

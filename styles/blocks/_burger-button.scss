@@ -1,0 +1,30 @@
+.burger-button {
+    height: 28px;
+    width: 28px;
+
+    background-color: transparent;
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 27px 23.5px;
+    border: #1C1C21 solid 1px;
+    border-radius: 20px 0 0 0;
+    height: 68px;
+    width: 68px;
+
+    &__line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-light);
+        border-radius: 2px;
+
+        &:last-child {
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@use '../media' as *;
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    padding: 40px;
+    border-radius: 12px;
+
+    background: url('../../images/reviews-card__bg.png') center/cover no-repeat;
+
+    @include laptop {
+        row-gap: 24px;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    @include tablet {
+        row-gap: 20px;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 500;
+        color: #E4E4E6;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    &__location {
+        color: #62646C;
+    }
+
+    &__rating {
+        &-list {
+            display: flex;
+            column-gap: 5px;
+
+            @include laptop {
+                column-gap: 4px;
+            }
+        }
+
+        &-star {
+            width: 24px;
+            height: 24px;
+
+            &--active {
+                color: #FFCE22;
+            }
+        }
+    }
+
+    &__comment {
+        font-size: 20px;
+        font-weight: 500;
+    }
+}

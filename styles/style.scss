@@ -1,0 +1,21 @@
+@use 'normalize';
+@use 'mixins';
+@use 'media';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/button';
+@use 'blocks/burger-button';
+@use 'blocks/header';
+@use 'blocks/types';
+@use 'blocks/hero';
+@use 'blocks/section';
+@use 'blocks/about';
+@use 'blocks/soc1als';
+@use 'blocks/services';
+@use 'blocks/works';
+@use 'blocks/faq';
+@use 'blocks/reviews';
+@use 'blocks/review-card';
+@use 'blocks/footer';

@@ -1,0 +1,112 @@
+@use '../media' as *;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+
+    padding-block: 100px;
+
+    @include laptop {
+        row-gap: 60px;
+    }
+
+    @include mobile {
+        row-gap: 40px;
+        padding-block: 40px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: 1px solid #1C1C21;
+
+        @include mobile {
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 20px;
+
+            padding-bottom: 20px;
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 50px;
+
+            row-gap: 4px;
+
+            @include laptop {
+                row-gap: 2px;
+            }
+
+            @include mobile {
+                row-gap: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        &-description {
+            font-size: 20px;
+            font-weight: 600;
+            color: #797C86;
+            text-transform: uppercase;
+
+            @include laptop {
+                font-size: 16px;
+            }
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        &-title {
+            font-size: 58px;
+            font-weight: 600;
+            color: var(--color-light);
+            text-transform: uppercase;
+
+            @include laptop {
+                font-size: 48px;
+            }
+
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+
+            row-gap: 6px;
+
+            margin-top: 16px;
+
+            &-title {
+                color: #62646C;
+            }
+
+            &-value {
+                font-size: 28px;
+                font-weight: 500;
+                color: #CACACE;
+            }
+        }
+
+        &-button {
+            align-self: flex-end;
+            margin-bottom: 50px;
+
+            @include laptop {
+                font-size: 14px;
+            }
+
+            @include mobile {
+                align-self: flex-start;
+            }
+        }
+    }
+}
